@@ -30,8 +30,7 @@ public class SearchController {
 
     @GetMapping("client/{username}")
     public List<RepositoryDTO> findAllRepositoriesForUserUsedClient(@PathVariable String username) {
-        List<RepositoryDTO> list = searchService.findAllRepositoriesForUserByClient(username);
-        return list;
+        return searchService.findAllRepositoriesForUserByClient(username);
     }
 
 }
